@@ -1,0 +1,62 @@
+{
+	"name": "@konceiver/tease",
+	"version": "1.0.0",
+	"description": "Standardises scripts & configurations for simplified TypeScript module maintenance",
+	"repository": "https://github.com/konceiver/tease",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Brian Faust",
+			"email": "brian@konceiver.dev",
+			"homepage": "https://konceiver.dev",
+			"role": "Developer"
+		}
+	],
+	"files": [
+		"config",
+		"dist"
+	],
+	"bin": "dist/bin.js",
+	"main": "dist/index",
+	"types": "dist/index",
+	"scripts": {
+		"lint": "ts-node src/bin.ts lint",
+		"format": "ts-node src/bin.ts format",
+		"build": "ts-node src/bin.ts build",
+		"specs": "ts-node src/bin.ts specs",
+		"test": "ts-node src/bin.ts test",
+		"prepare": "ts-node src/bin.ts install && ts-node src/bin.ts build",
+		"publish": "yarn build && yarn npm publish --access public --tolerate-republish"
+	},
+	"dependencies": {
+		"@sindresorhus/tsconfig": "^0.8.0",
+		"@types/jest": "^26.0.20",
+		"@types/node": "^14.14.28",
+		"@types/prettier": "^2.2.1",
+		"@types/rimraf": "^3.0.0",
+		"@typescript-eslint/eslint-plugin": "^4.15.1",
+		"@typescript-eslint/parser": "^4.15.1",
+		"@yarnpkg/pnpify": "^2.4.0",
+		"arg": "^5.0.0",
+		"dot-prop": "^6.0.1",
+		"eslint": "^7.20.0",
+		"eslint-config-prettier": "^7.2.0",
+		"eslint-plugin-jest": "^24.1.3",
+		"eslint-plugin-prettier": "^3.3.1",
+		"eslint-plugin-simple-import-sort": "^7.0.0",
+		"eslint-plugin-unused-imports": "^1.1.0",
+		"husky": "^5.0.9",
+		"is-ci": "^2.0.0",
+		"jest": "^26.6.3",
+		"jest-extended": "^0.11.5",
+		"pinst": "^2.1.4",
+		"pkg-conf": "^3.1.0",
+		"prettier": "^2.2.1",
+		"rimraf": "^3.0.2",
+		"ts-jest": "^26.5.1",
+		"ts-node": "^9.1.1",
+		"typescript": "^4.1.5",
+		"typescript-language-server": "^0.5.1",
+		"zod": "^1.11.11"
+	}
+}
