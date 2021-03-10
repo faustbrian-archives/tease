@@ -1,12 +1,18 @@
 import arg from "arg";
 import { spawn } from "child_process";
 import { get } from "dot-prop";
-import isCI from "is-ci";
+import { isCI } from "ci-info";
 import { dirname, join, posix, relative, resolve } from "path";
 import pkgConf from "pkg-conf";
 
 import { eslintGlob, prettierGlob } from "./common";
-import { configDir, configEslint, configLintStaged, configSchema, PATHS } from "./constants";
+import {
+	configDir,
+	configEslint,
+	configLintStaged,
+	configSchema,
+	PATHS,
+} from "./constants";
 import { Config, RunOptions, Options } from "./contracts";
 
 /**
@@ -102,40 +108,27 @@ function getEslintPaths(
  * Lint the project using `eslint`.
  */
 export async function lint(argv: string[], config: Config) {
-	const { _, "--filter-paths": filterPaths = false } = arg(
-		{ "--filter-paths": Boolean },
+	const { _, "--check": check, "--filter-paths": filterPaths = false } = arg(
+		{
+			"--filter-paths": Boolean,
+			"--check": Boolean,
+		},
 		{ argv }
 	);
 
 	const eslintPaths = getEslintPaths(_, filterPaths, config);
-	await run(
-		PATHS.eslint,
-		["--fix", "--config", configEslint, ...eslintPaths],
-		{
-			cwd: config.dir,
-			name: "eslint --fix",
-		}
-	);
+	await run(PATHS.eslint, args(!check && "--fix", ["--config", configEslint], eslintPaths), {
+		cwd: config.dir,
+		name: "eslint --fix",
+	});
 }
 
 /**
  * Run checks intended for CI, basically linting/formatting without auto-fixing.
  */
 export async function check(_argv: string[], config: Config) {
-	const eslintPaths = config.src.map((x) => posix.join(x, `**/${eslintGlob}`));
-	const prettierPaths = config.src.map((x) =>
-		posix.join(x, `**/${prettierGlob}`)
-	);
-
-	await run(PATHS.eslint, ["--config", configEslint, ...eslintPaths], {
-		cwd: config.dir,
-		name: "eslint",
-	});
-
-	await run(PATHS.prettier, ["--check", ...prettierPaths], {
-		cwd: config.dir,
-		name: "prettier --check",
-	});
+	await lint(["--check"], config);
+	await format(["--check"], config);
 }
 
 /**
@@ -143,7 +136,7 @@ export async function check(_argv: string[], config: Config) {
  */
 export async function test(_argv: string[], config: Config) {
 	await check([], config);
-	await specs(["--ci"], config);
+	await specs(["--ci", "--coverage"], config);
 	await build(["--no-clean"], config);
 }
 
@@ -153,23 +146,41 @@ export async function test(_argv: string[], config: Config) {
 export async function specs(argv: string[], { src, dir }: Config) {
 	const {
 		_: paths,
-		"--watch": watch,
 		"--ci": ci = isCI,
+		"--coverage": coverage,
+		"--only-changed": onlyChanged,
+		"--test-pattern": testPattern,
 		"--update-snapshot": updateSnapshot,
+		"--watch-all": watchAll,
+		"--watch": watch,
 	} = arg(
-		{ "--watch": Boolean, "--update-snapshot": Boolean, "--ci": Boolean },
+		{
+			"--ci": Boolean,
+			"--coverage": Boolean,
+			"--only-changed": Boolean,
+			"--test-pattern": String,
+			"--update-snapshot": Boolean,
+			"--watch-all": Boolean,
+			"--watch": Boolean,
+			"-o": "--only-changed",
+			"-t": "--test-pattern",
+			"-u": "--update-snapshot",
+		},
 		{ argv }
 	);
 
 	await run(
 		PATHS.jest,
 		args(
-			"--coverage",
-			["--config", join(configDir, "jest.config.js")],
+			["--config", join(configDir, "jest.js")],
 			...src.map((x) => ["--roots", posix.join("<rootDir>", x)]),
 			ci && "--ci",
-			watch && "--watch",
+			coverage && "--coverage",
+			onlyChanged && "--only-changed",
+			testPattern && ["--test-name-pattern", testPattern],
 			updateSnapshot && "--update-snapshot",
+			watch && "--watch",
+			watchAll && "--watch-all",
 			paths
 		),
 		{ cwd: dir, name: "jest" }
@@ -180,14 +191,19 @@ export async function specs(argv: string[], { src, dir }: Config) {
  * Format code using `prettier`.
  */
 export async function format(argv: string[], { dir, src }: Config) {
-	const { _: paths } = arg({}, { argv });
+	const { _: paths, "--check": check } = arg(
+		{
+			"--check": Boolean,
+		},
+		{ argv }
+	);
 
 	if (!paths.length) {
 		paths.push(prettierGlob);
 		for (const dir of src) paths.push(posix.join(dir, `**/${prettierGlob}`));
 	}
 
-	await run(PATHS.prettier, ["--write", ...paths], {
+	await run(PATHS.prettier, args(!check && "--write", check && "--check", paths), {
 		cwd: dir,
 		name: "prettier --write",
 	});
