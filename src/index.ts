@@ -122,7 +122,7 @@ export async function lint(argv: string[], config: Config) {
 		args(!check && "--fix", ["--config", configEslint], eslintPaths),
 		{
 			cwd: config.dir,
-			name: "eslint --fix",
+			name: "eslint",
 		}
 	);
 }
@@ -212,7 +212,7 @@ export async function format(argv: string[], { dir, src }: Config) {
 		args(!check && "--write", check && "--check", paths),
 		{
 			cwd: dir,
-			name: "prettier --write",
+			name: "prettier",
 		}
 	);
 }
