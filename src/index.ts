@@ -117,10 +117,14 @@ export async function lint(argv: string[], config: Config) {
 	);
 
 	const eslintPaths = getEslintPaths(_, filterPaths, config);
-	await run(PATHS.eslint, args(!check && "--fix", ["--config", configEslint], eslintPaths), {
-		cwd: config.dir,
-		name: "eslint --fix",
-	});
+	await run(
+		PATHS.eslint,
+		args(!check && "--fix", ["--config", configEslint], eslintPaths),
+		{
+			cwd: config.dir,
+			name: "eslint --fix",
+		}
+	);
 }
 
 /**
@@ -203,10 +207,14 @@ export async function format(argv: string[], { dir, src }: Config) {
 		for (const dir of src) paths.push(posix.join(dir, `**/${prettierGlob}`));
 	}
 
-	await run(PATHS.prettier, args(!check && "--write", check && "--check", paths), {
-		cwd: dir,
-		name: "prettier --write",
-	});
+	await run(
+		PATHS.prettier,
+		args(!check && "--write", check && "--check", paths),
+		{
+			cwd: dir,
+			name: "prettier --write",
+		}
+	);
 }
 
 /**
