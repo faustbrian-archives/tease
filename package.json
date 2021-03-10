@@ -2,33 +2,24 @@
 	"name": "@konceiver/tease",
 	"version": "1.1.0",
 	"description": "Standardises scripts & configurations for simplified TypeScript module maintenance",
-	"repository": "https://github.com/konceiver/tease",
 	"license": "MIT",
-	"authors": [
-		{
-			"name": "Brian Faust",
-			"email": "brian@konceiver.dev",
-			"homepage": "https://konceiver.dev",
-			"role": "Developer"
-		}
-	],
-	"files": [
-		"config",
-		"dist"
-	],
+	"repository": "https://github.com/konceiver/tease",
+	"main": "dist/index.js",
 	"bin": "dist/bin.js",
-	"main": "dist/index",
-	"types": "dist/index",
 	"scripts": {
-		"check": "ts-node src/bin.ts check",
-		"lint": "ts-node src/bin.ts lint",
-		"format": "ts-node src/bin.ts format",
 		"build": "ts-node src/bin.ts build",
-		"specs": "ts-node src/bin.ts specs",
-		"test": "ts-node src/bin.ts test",
+		"check": "ts-node src/bin.ts check",
+		"format": "ts-node src/bin.ts format",
+		"lint": "ts-node src/bin.ts lint",
 		"prepare": "ts-node src/bin.ts install && ts-node src/bin.ts build",
-		"publish": "npm run build && npm publish --access public --tolerate-republish"
+		"publish": "npm run build && npm publish --access public --tolerate-republish",
+		"specs": "ts-node src/bin.ts specs",
+		"test": "ts-node src/bin.ts test"
 	},
+	"files": [
+		"config/",
+		"dist/"
+	],
 	"dependencies": {
 		"@sindresorhus/tsconfig": "^0.8.0",
 		"@types/jest": "^26.0.20",
@@ -53,11 +44,21 @@
 		"pinst": "^2.1.4",
 		"pkg-conf": "^3.1.0",
 		"prettier": "^2.2.1",
+		"prettier-plugin-package": "^1.3.0",
 		"rimraf": "^3.0.2",
 		"ts-jest": "^26.5.1",
 		"ts-node": "^9.1.1",
 		"typescript": "^4.1.5",
 		"typescript-language-server": "^0.5.1",
 		"zod": "^1.11.11"
-	}
+	},
+	"types": "dist/index",
+	"authors": [
+		{
+			"name": "Brian Faust",
+			"email": "brian@konceiver.dev",
+			"homepage": "https://konceiver.dev",
+			"role": "Developer"
+		}
+	]
 }
