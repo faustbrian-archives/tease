@@ -3,10 +3,10 @@ name: Format
 on:
     pull_request:
         paths:
-            - '**.css'
-            - '**.js'
-            - '**.ts'
-            - '**.vue'
+            - "**.css"
+            - "**.js"
+            - "**.ts"
+            - "**.vue"
 
 jobs:
     prettier:
@@ -16,10 +16,10 @@ jobs:
             - uses: actions/checkout@v1
 
             - name: Install
-              run: yarn install --frozen-lockfile
+              run: npm ci
 
             - name: Run prettier
-              run: yarn run prettier --write 'src/**/*.{css,js,vue}'
+              run: npm run prettier --write 'src/**/*.{css,js,vue}'
 
             - uses: stefanzweifel/git-auto-commit-action@v3.0.0
               env:

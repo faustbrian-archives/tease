@@ -27,7 +27,7 @@
 		"specs": "ts-node src/bin.ts specs",
 		"test": "ts-node src/bin.ts test",
 		"prepare": "ts-node src/bin.ts install && ts-node src/bin.ts build",
-		"publish": "yarn build && yarn npm publish --access public --tolerate-republish"
+		"publish": "npm run build && npm publish --access public --tolerate-republish"
 	},
 	"dependencies": {
 		"@sindresorhus/tsconfig": "^0.8.0",
@@ -37,7 +37,6 @@
 		"@types/rimraf": "^3.0.0",
 		"@typescript-eslint/eslint-plugin": "^4.15.1",
 		"@typescript-eslint/parser": "^4.15.1",
-		"@yarnpkg/pnpify": "^2.4.0",
 		"arg": "^5.0.0",
 		"ci-info": "^3.1.1",
 		"dot-prop": "^6.0.1",
