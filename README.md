@@ -5,8 +5,6 @@
 [![Latest Version](https://badgen.net/npm/v/@konceiver/tease)](https://npmjs.com/package/@konceiver/tease)
 [![Software License](https://badgen.net/npm/license/@konceiver/tease)](https://npmjs.com/package/@konceiver/tease)
 [![Build Status](https://img.shields.io/github/workflow/status/konceiver/tease/run-tests?label=tests)](https://github.com/konceiver/tease/actions?query=workflow%3Arun-tests+branch%3Amaster)
-[![Coverage Status](https://badgen.net/codeclimate/coverage/konceiver/tease)](https://codeclimate.com/github/konceiver/tease)
-[![Quality Score](https://badgen.net/codeclimate/maintainability/konceiver/tease)](https://codeclimate.com/github/konceiver/tease)
 [![Total Downloads](https://badgen.net/npm/dt/@konceiver/tease)](https://npmjs.com/package/@konceiver/tease)
 
 This package was created by, and is maintained by [Brian Faust](https://github.com/faustbrian), and provides standardises scripts & configurations for simplified TypeScript module maintenance.
