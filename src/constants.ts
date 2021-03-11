@@ -1,5 +1,5 @@
 import { join, resolve } from "path";
-import { array, boolean, object, string } from "zod";
+import { array, object, string } from "zod";
 
 /**
  * Configuration files.

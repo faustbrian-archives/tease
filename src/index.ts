@@ -1,7 +1,7 @@
 import arg from "arg";
 import { spawn } from "child_process";
-import { get } from "dot-prop";
 import { isCI } from "ci-info";
+import { get } from "dot-prop";
 import { dirname, join, posix, relative, resolve } from "path";
 import pkgConf from "pkg-conf";
 
@@ -13,7 +13,7 @@ import {
 	configSchema,
 	PATHS,
 } from "./constants";
-import { Config, RunOptions, Options } from "./contracts";
+import { Config, Options, RunOptions } from "./contracts";
 
 /**
  * Spawn a CLI command process.
