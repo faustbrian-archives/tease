@@ -176,7 +176,7 @@ export async function specs(argv: string[], { src, dir }: Config) {
 	await run(
 		PATHS.jest,
 		args(
-			["--config", join(configDir, "jest.js")],
+			["--config", join(configDir, "jest.config.js")],
 			...src.map((x) => ["--roots", posix.join("<rootDir>", x)]),
 			ci && "--ci",
 			coverage && "--coverage",
