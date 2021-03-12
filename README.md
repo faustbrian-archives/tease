@@ -17,6 +17,22 @@ This package was created by, and is maintained by [Brian Faust](https://github.c
 npm install @konceiver/tease
 ```
 
+## Usage
+
+In your `package.json` you can use the scripts:
+
+```json
+{
+    "scripts": {
+        "lint": "tease lint",
+        "format": "tease format",
+        "specs": "tease specs",
+        "test": "tease test",
+        "prepare": "tease install && tease build"
+    }
+}
+```
+
 ## Testing
 
 ```bash
