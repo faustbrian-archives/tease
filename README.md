@@ -14,7 +14,7 @@ This package was created by, and is maintained by [Brian Faust](https://github.c
 ## Installation
 
 ```bash
-npm install @konceiver/tease
+npm install @konceiver/tease --include=dev
 ```
 
 ## Usage
