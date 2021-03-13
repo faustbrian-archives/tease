@@ -23,13 +23,13 @@ In your `package.json` you can use the scripts:
 
 ```json
 {
-    "scripts": {
-        "lint": "tease lint",
-        "format": "tease format",
-        "specs": "tease specs",
-        "test": "tease test",
-        "prepare": "tease install && tease build"
-    }
+	"scripts": {
+		"lint": "tease lint",
+		"format": "tease format",
+		"specs": "tease specs",
+		"test": "tease test",
+		"prepare": "tease install && tease build"
+	}
 }
 ```
 
