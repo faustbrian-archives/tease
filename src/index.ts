@@ -53,7 +53,7 @@ function args(...values: Array<string | string[] | false | undefined>) {
 export async function build(argv: string[], { dir, dist, project }: Config) {
 	const { "--no-clean": noClean } = arg({ "--no-clean": Boolean }, { argv });
 
-	if (!noClean)
+	if (!noClean) {
 		await run(
 			PATHS.rimraf,
 			args(
@@ -62,14 +62,13 @@ export async function build(argv: string[], { dir, dist, project }: Config) {
 			),
 			{ cwd: dir, name: "rimraf" }
 		);
-
-	// Run each project in sequence.
-	for (const tsconfigPath of project) {
-		await run(PATHS.typescript, ["--project", tsconfigPath], {
-			name: `tsc \`${tsconfigPath}\``,
-			cwd: dir,
-		});
 	}
+
+	// Build all project references using `--build`.
+	await run(PATHS.typescript, ["-b", ...project], {
+		name: "tsc",
+		cwd: dir,
+	});
 }
 
 /**
@@ -138,9 +137,17 @@ export async function check(_argv: string[], config: Config) {
 /**
  * Run full test suite without automatic fixes.
  */
-export async function test(_argv: string[], config: Config) {
+export async function test(argv: string[], config: Config) {
+	const { "--force-exit": forceExit } = arg(
+		{
+			"--force-exit": Boolean,
+			"-f": "--force-exit",
+		},
+		{ argv }
+	);
+
 	await check([], config);
-	await specs(["--ci", "--coverage"], config);
+	await specs(args("--ci", "--coverage", forceExit && "--force-exit"), config);
 	await build(["--no-clean"], config);
 }
 
@@ -152,6 +159,8 @@ export async function specs(argv: string[], { src, dir }: Config) {
 		_: paths,
 		"--ci": ci = isCI,
 		"--coverage": coverage,
+		"--detect-open-handled": detectOpenHandles,
+		"--force-exit": forceExit,
 		"--only-changed": onlyChanged,
 		"--test-pattern": testPattern,
 		"--update-snapshot": updateSnapshot,
@@ -161,11 +170,14 @@ export async function specs(argv: string[], { src, dir }: Config) {
 		{
 			"--ci": Boolean,
 			"--coverage": Boolean,
+			"--detect-open-handled": Boolean,
+			"--force-exit": Boolean,
 			"--only-changed": Boolean,
 			"--test-pattern": String,
 			"--update-snapshot": Boolean,
 			"--watch-all": Boolean,
 			"--watch": Boolean,
+			"-f": "--force-exit",
 			"-o": "--only-changed",
 			"-t": "--test-pattern",
 			"-u": "--update-snapshot",
@@ -180,6 +192,8 @@ export async function specs(argv: string[], { src, dir }: Config) {
 			...src.map((x) => ["--roots", posix.join("<rootDir>", x)]),
 			ci && "--ci",
 			coverage && "--coverage",
+			detectOpenHandles && "--detect-open-handles",
+			forceExit && "--force-exit",
 			onlyChanged && "--only-changed",
 			testPattern && ["--test-name-pattern", testPattern],
 			updateSnapshot && "--update-snapshot",
