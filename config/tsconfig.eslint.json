@@ -25,6 +25,6 @@
 		"stripInternal": true,
 		"target": "es2019"
 	},
-	"include": ["../src/**/*"],
+	"include": ["../../../../src/**/*"],
 	"exclude": ["dist"]
 }
