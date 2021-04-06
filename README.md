@@ -24,6 +24,7 @@ In your `package.json` you can use the scripts:
 ```json
 {
 	"scripts": {
+		"build": "tease build",
 		"lint": "tease lint",
 		"format": "tease format",
 		"specs": "tease specs",
