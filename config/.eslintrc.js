@@ -1,18 +1,21 @@
-{
-	"parser": "@typescript-eslint/parser",
-	"parserOptions": {
-		"project": "node_modules/@konceiver/tease/config/tsconfig.eslint.json",
-		"extraFileExtensions": [".json"]
+module.exports = {
+	parser: "@typescript-eslint/parser",
+	parserOptions: {
+		project:
+			process.env.NODE_ENV === "test"
+				? "./tsconfig.eslint.json"
+				: "node_modules/@konceiver/tease/config/tsconfig.eslint.json",
+		extraFileExtensions: [".json"],
 	},
-	"plugins": ["@typescript-eslint", "jest", "prettier", "simple-import-sort", "unused-imports"],
-	"extends": [
+	plugins: ["@typescript-eslint", "jest", "prettier", "simple-import-sort", "unused-imports"],
+	extends: [
 		"eslint:recommended",
 		"plugin:@typescript-eslint/eslint-recommended",
 		"plugin:@typescript-eslint/recommended-requiring-type-checking",
 		"plugin:@typescript-eslint/recommended",
-		"plugin:jest/recommended"
+		"plugin:jest/recommended",
 	],
-	"rules": {
+	rules: {
 		"@typescript-eslint/ban-ts-comment": "off",
 		"@typescript-eslint/ban-types": "off",
 		"@typescript-eslint/naming-convention": "off",
@@ -34,11 +37,11 @@
 		"prefer-const": [
 			"error",
 			{
-				"destructuring": "all"
-			}
+				destructuring: "all",
+			},
 		],
 		"prettier/prettier": "error",
 		"simple-import-sort/imports": "error",
-		"unused-imports/no-unused-imports-ts": "error"
-	}
-}
+		"unused-imports/no-unused-imports-ts": "error",
+	},
+};

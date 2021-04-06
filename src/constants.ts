@@ -6,7 +6,7 @@ import { array, object, string } from "zod";
  */
 export const configDir = resolve(__dirname, "../config");
 export const configLintStaged = join(configDir, "lint-staged.js");
-export const configEslint = join(configDir, ".eslintrc.json");
+export const configEslint = join(configDir, ".eslintrc.js");
 
 /**
  * Paths to node.js CLIs in use.
