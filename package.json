@@ -1,6 +1,6 @@
 {
 	"name": "@konceiver/tease",
-	"version": "1.3.0",
+	"version": "1.4.0",
 	"description": "Standardises scripts & configurations for simplified TypeScript module maintenance",
 	"license": "MIT",
 	"repository": "https://github.com/konceiver/tease",
