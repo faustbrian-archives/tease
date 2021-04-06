@@ -2,7 +2,7 @@ module.exports = {
 	parser: "@typescript-eslint/parser",
 	parserOptions: {
 		project:
-			process.env.NODE_ENV === "test"
+			process.env.npm_package_name === "@konceiver/tease"
 				? "./tsconfig.eslint.json"
 				: "node_modules/@konceiver/tease/config/tsconfig.eslint.json",
 		extraFileExtensions: [".json"],
