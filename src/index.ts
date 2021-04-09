@@ -159,7 +159,7 @@ export async function specs(argv: string[], { src, dir }: Config) {
 		_: paths,
 		"--ci": ci = isCI,
 		"--coverage": coverage,
-		"--detect-open-handled": detectOpenHandles,
+		"--detect-open-handles": detectOpenHandles,
 		"--force-exit": forceExit,
 		"--only-changed": onlyChanged,
 		"--test-pattern": testPattern,
@@ -170,7 +170,7 @@ export async function specs(argv: string[], { src, dir }: Config) {
 		{
 			"--ci": Boolean,
 			"--coverage": Boolean,
-			"--detect-open-handled": Boolean,
+			"--detect-open-handles": Boolean,
 			"--force-exit": Boolean,
 			"--only-changed": Boolean,
 			"--test-pattern": String,
@@ -224,7 +224,7 @@ export async function format(argv: string[], { dir, src }: Config) {
 	await run(
 		PATHS.prettier,
 		args(
-			["--plugin", "prettier-plugin-package"],
+			["--plugin", PATHS.prettierPluginPackage],
 			!check && "--write",
 			check && "--check",
 			paths

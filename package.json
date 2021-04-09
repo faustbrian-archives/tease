@@ -2,10 +2,15 @@
 	"name": "@konceiver/tease",
 	"version": "1.6.0",
 	"description": "Standardises scripts & configurations for simplified TypeScript module maintenance",
-	"license": "MIT",
 	"repository": "https://github.com/konceiver/tease",
+	"license": "MIT",
 	"main": "dist/index.js",
+	"types": "dist/index",
 	"bin": "dist/bin.js",
+	"files": [
+		"config/",
+		"dist/"
+	],
 	"scripts": {
 		"build": "ts-node src/bin.ts build",
 		"check": "ts-node src/bin.ts check",
@@ -16,10 +21,6 @@
 		"specs": "ts-node src/bin.ts specs",
 		"test": "ts-node src/bin.ts test"
 	},
-	"files": [
-		"config/",
-		"dist/"
-	],
 	"dependencies": {
 		"@sindresorhus/tsconfig": "^0.8.0",
 		"@types/jest": "^26.0.20",
@@ -52,7 +53,6 @@
 		"typescript-language-server": "^0.5.1",
 		"zod": "^1.11.11"
 	},
-	"types": "dist/index",
 	"authors": [
 		{
 			"name": "Brian Faust",

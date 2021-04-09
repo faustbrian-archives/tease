@@ -2,13 +2,15 @@
 	"extends": "@sindresorhus/tsconfig",
 	"compilerOptions": {
 		"alwaysStrict": true,
-		"declaration": true,
+        "declaration": true,
 		"emitDecoratorMetadata": true,
-		"esModuleInterop": true,
+        "esModuleInterop": true,
 		"experimentalDecorators": true,
-		"forceConsistentCasingInFileNames": true,
+        "forceConsistentCasingInFileNames": true,
 		"incremental": true,
-		"lib": ["es2019", "dom"],
+        "inlineSources": true,
+        "isolatedModules": true,
+		"lib": ["ES2019", "dom"],
 		"module": "ES2015",
 		"moduleResolution": "node",
 		"newLine": "lf",
@@ -27,7 +29,7 @@
 		"strict": true,
 		"strictNullChecks": true,
 		"stripInternal": true,
-		"target": "es2019"
+		"target": "ES2019"
 	},
 	"include": ["../../../../src/**/*"],
 	"exclude": ["node_modules", "dist", "**/*.spec.ts", "**/*.test.ts"]
