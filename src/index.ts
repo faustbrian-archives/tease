@@ -138,7 +138,10 @@ export async function check(_argv: string[], config: Config) {
  * Run full test suite without automatic fixes.
  */
 export async function test(argv: string[], config: Config) {
-	const { "--force-exit": forceExit, "--pass-with-no-tests": passWithNoTests } = arg(
+	const {
+		"--force-exit": forceExit,
+		"--pass-with-no-tests": passWithNoTests,
+	} = arg(
 		{
 			"--force-exit": Boolean,
 			"--pass-with-no-tests": Boolean,
@@ -148,7 +151,15 @@ export async function test(argv: string[], config: Config) {
 	);
 
 	await check([], config);
-    await specs(args("--ci", "--coverage", forceExit && "--force-exit", passWithNoTests && "--pass-with-no-tests"), config);
+	await specs(
+		args(
+			"--ci",
+			"--coverage",
+			forceExit && "--force-exit",
+			passWithNoTests && "--pass-with-no-tests"
+		),
+		config
+	);
 	await build(["--no-clean"], config);
 }
 
