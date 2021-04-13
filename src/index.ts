@@ -138,16 +138,17 @@ export async function check(_argv: string[], config: Config) {
  * Run full test suite without automatic fixes.
  */
 export async function test(argv: string[], config: Config) {
-	const { "--force-exit": forceExit } = arg(
+	const { "--force-exit": forceExit, "--pass-with-no-tests": passWithNoTests } = arg(
 		{
 			"--force-exit": Boolean,
+			"--pass-with-no-tests": Boolean,
 			"-f": "--force-exit",
 		},
 		{ argv }
 	);
 
 	await check([], config);
-	await specs(args("--ci", "--coverage", forceExit && "--force-exit"), config);
+    await specs(args("--ci", "--coverage", forceExit && "--force-exit", passWithNoTests && "--pass-with-no-tests"), config);
 	await build(["--no-clean"], config);
 }
 
@@ -162,6 +163,7 @@ export async function specs(argv: string[], { src, dir }: Config) {
 		"--detect-open-handles": detectOpenHandles,
 		"--force-exit": forceExit,
 		"--only-changed": onlyChanged,
+		"--pass-with-no-tests": passWithNoTests,
 		"--test-pattern": testPattern,
 		"--update-snapshot": updateSnapshot,
 		"--watch-all": watchAll,
@@ -173,6 +175,7 @@ export async function specs(argv: string[], { src, dir }: Config) {
 			"--detect-open-handles": Boolean,
 			"--force-exit": Boolean,
 			"--only-changed": Boolean,
+			"--pass-with-no-tests": Boolean,
 			"--test-pattern": String,
 			"--update-snapshot": Boolean,
 			"--watch-all": Boolean,
@@ -195,6 +198,7 @@ export async function specs(argv: string[], { src, dir }: Config) {
 			detectOpenHandles && "--detect-open-handles",
 			forceExit && "--force-exit",
 			onlyChanged && "--only-changed",
+			passWithNoTests && "--pass-with-no-tests",
 			testPattern && ["--test-name-pattern", testPattern],
 			updateSnapshot && "--update-snapshot",
 			watch && "--watch",
