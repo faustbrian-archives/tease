@@ -221,7 +221,7 @@
         "signature": "6b22f846d140e0e6d9fbd37714a8db1dc4031baffd41bc4f8488d979f450fd76",
         "affectsGlobalScope": false
       },
-      "./node_modules/zod/lib/src/zoderror.d.ts": {
+      "./node_modules/zod/lib/src/ZodError.d.ts": {
         "version": "c6b9aa4380e12c3aef4397424cb481da90b75b078a9d95f153f918c6df620961",
         "signature": "c6b9aa4380e12c3aef4397424cb481da90b75b078a9d95f153f918c6df620961",
         "affectsGlobalScope": false
@@ -231,7 +231,7 @@
         "signature": "fcde2d4f1978e8a9bce31e5a0c6d9f40574c8d7f385a3cad3fdd7b06f27dcbea",
         "affectsGlobalScope": false
       },
-      "./node_modules/zod/lib/src/defaulterrormap.d.ts": {
+      "./node_modules/zod/lib/src/defaultErrorMap.d.ts": {
         "version": "b26d4f1aa6c13c3fabee47799ca0e28be207d59f8e15866502587c3a7f1d8466",
         "signature": "b26d4f1aa6c13c3fabee47799ca0e28be207d59f8e15866502587c3a7f1d8466",
         "affectsGlobalScope": false
@@ -246,7 +246,7 @@
         "signature": "12b851951081e6f3d458bbd6a5e7760085ec89c181772c9a06a3ac3cd2ebd31c",
         "affectsGlobalScope": false
       },
-      "./node_modules/zod/lib/src/helpers/errorutil.d.ts": {
+      "./node_modules/zod/lib/src/helpers/errorUtil.d.ts": {
         "version": "780007d2876e93e4c144b174582cc4f8a53cd825c3a85f376bf3c80a5f8d4fa1",
         "signature": "780007d2876e93e4c144b174582cc4f8a53cd825c3a85f376bf3c80a5f8d4fa1",
         "affectsGlobalScope": false
@@ -311,12 +311,12 @@
         "signature": "290a51b04a41e8b104eb7eb7c38403509dbb1116f27679c51d686e969662b80d",
         "affectsGlobalScope": false
       },
-      "./node_modules/zod/lib/src/helpers/objectutil.d.ts": {
+      "./node_modules/zod/lib/src/helpers/objectUtil.d.ts": {
         "version": "9c7afb18ed6901579c23f4a72a92a3a81008c7a9e65b89516ba527d727daf0fa",
         "signature": "9c7afb18ed6901579c23f4a72a92a3a81008c7a9e65b89516ba527d727daf0fa",
         "affectsGlobalScope": false
       },
-      "./node_modules/zod/lib/src/helpers/partialutil.d.ts": {
+      "./node_modules/zod/lib/src/helpers/partialUtil.d.ts": {
         "version": "7e01c1cbeec6dfab685c5f31efd29f6a5145deb88f62640d48e4342fc58dc421",
         "signature": "7e01c1cbeec6dfab685c5f31efd29f6a5145deb88f62640d48e4342fc58dc421",
         "affectsGlobalScope": false
@@ -361,7 +361,7 @@
         "signature": "8abfa55027f6e5e016afe97d06b2bb162392e668431f6275b08c0ac7515f9e12",
         "affectsGlobalScope": false
       },
-      "./node_modules/zod/lib/src/types/nativeenum.d.ts": {
+      "./node_modules/zod/lib/src/types/nativeEnum.d.ts": {
         "version": "e113c825becd5162b7d18815cec7c90d3a850175e830396bb1f41f26c235d790",
         "signature": "e113c825becd5162b7d18815cec7c90d3a850175e830396bb1f41f26c235d790",
         "affectsGlobalScope": false
@@ -641,7 +641,7 @@
         "signature": "9c4c395e927045b324877acdc4bfb95f128f36bc9f073266a2f0342495075a4f",
         "affectsGlobalScope": false
       },
-      "./node_modules/jest-diff/build/cleanupsemantic.d.ts": {
+      "./node_modules/jest-diff/build/cleanupSemantic.d.ts": {
         "version": "d8aab31ba8e618cc3eea10b0945de81cb93b7e8150a013a482332263b9305322",
         "signature": "d8aab31ba8e618cc3eea10b0945de81cb93b7e8150a013a482332263b9305322",
         "affectsGlobalScope": false
@@ -651,12 +651,12 @@
         "signature": "69da61a7b5093dac77fa3bec8be95dcf9a74c95a0e9161edb98bb24e30e439d2",
         "affectsGlobalScope": false
       },
-      "./node_modules/jest-diff/build/difflines.d.ts": {
+      "./node_modules/jest-diff/build/diffLines.d.ts": {
         "version": "561eca7a381b96d6ccac6e4061e6d2ae53f5bc44203f3fd9f5b26864c32ae6e9",
         "signature": "561eca7a381b96d6ccac6e4061e6d2ae53f5bc44203f3fd9f5b26864c32ae6e9",
         "affectsGlobalScope": false
       },
-      "./node_modules/jest-diff/build/printdiffs.d.ts": {
+      "./node_modules/jest-diff/build/printDiffs.d.ts": {
         "version": "62ea38627e3ebab429f7616812a9394d327c2bc271003dfba985de9b4137369f",
         "signature": "62ea38627e3ebab429f7616812a9394d327c2bc271003dfba985de9b4137369f",
         "affectsGlobalScope": false
@@ -960,39 +960,43 @@
         "./node_modules/@types/node/stream.d.ts",
         "./node_modules/@types/node/zlib.d.ts"
       ],
-      "./node_modules/jest-diff/build/difflines.d.ts": [
-        "./node_modules/jest-diff/build/cleanupsemantic.d.ts",
+      "./node_modules/jest-diff/build/diffLines.d.ts": [
+        "./node_modules/jest-diff/build/cleanupSemantic.d.ts",
         "./node_modules/jest-diff/build/types.d.ts"
       ],
       "./node_modules/jest-diff/build/index.d.ts": [
-        "./node_modules/jest-diff/build/cleanupsemantic.d.ts",
-        "./node_modules/jest-diff/build/difflines.d.ts",
-        "./node_modules/jest-diff/build/printdiffs.d.ts",
+        "./node_modules/jest-diff/build/cleanupSemantic.d.ts",
+        "./node_modules/jest-diff/build/diffLines.d.ts",
+        "./node_modules/jest-diff/build/printDiffs.d.ts",
         "./node_modules/jest-diff/build/types.d.ts"
       ],
-      "./node_modules/jest-diff/build/printdiffs.d.ts": [
-        "./node_modules/jest-diff/build/cleanupsemantic.d.ts",
+      "./node_modules/jest-diff/build/printDiffs.d.ts": [
+        "./node_modules/jest-diff/build/cleanupSemantic.d.ts",
         "./node_modules/jest-diff/build/types.d.ts"
       ],
       "./node_modules/pretty-format/build/index.d.ts": [
         "./node_modules/pretty-format/build/types.d.ts"
       ],
+      "./node_modules/zod/lib/src/ZodError.d.ts": [
+        "./node_modules/zod/lib/src/parser.d.ts"
+      ],
       "./node_modules/zod/lib/src/codegen.d.ts": [
         "./node_modules/zod/lib/src/index.d.ts"
       ],
-      "./node_modules/zod/lib/src/defaulterrormap.d.ts": [
-        "./node_modules/zod/lib/src/zoderror.d.ts"
+      "./node_modules/zod/lib/src/defaultErrorMap.d.ts": [
+        "./node_modules/zod/lib/src/ZodError.d.ts"
       ],
-      "./node_modules/zod/lib/src/helpers/objectutil.d.ts": [
+      "./node_modules/zod/lib/src/helpers/objectUtil.d.ts": [
         "./node_modules/zod/lib/src/types/base.d.ts",
         "./node_modules/zod/lib/src/types/object.d.ts"
       ],
-      "./node_modules/zod/lib/src/helpers/partialutil.d.ts": [
+      "./node_modules/zod/lib/src/helpers/partialUtil.d.ts": [
         "./node_modules/zod/lib/src/index.d.ts"
       ],
       "./node_modules/zod/lib/src/index.d.ts": [
+        "./node_modules/zod/lib/src/ZodError.d.ts",
         "./node_modules/zod/lib/src/codegen.d.ts",
-        "./node_modules/zod/lib/src/defaulterrormap.d.ts",
+        "./node_modules/zod/lib/src/defaultErrorMap.d.ts",
         "./node_modules/zod/lib/src/parser.d.ts",
         "./node_modules/zod/lib/src/types/any.d.ts",
         "./node_modules/zod/lib/src/types/array.d.ts",
@@ -1006,7 +1010,7 @@
         "./node_modules/zod/lib/src/types/keyof.d.ts",
         "./node_modules/zod/lib/src/types/lazy.d.ts",
         "./node_modules/zod/lib/src/types/literal.d.ts",
-        "./node_modules/zod/lib/src/types/nativeenum.d.ts",
+        "./node_modules/zod/lib/src/types/nativeEnum.d.ts",
         "./node_modules/zod/lib/src/types/null.d.ts",
         "./node_modules/zod/lib/src/types/number.d.ts",
         "./node_modules/zod/lib/src/types/object.d.ts",
@@ -1017,14 +1021,13 @@
         "./node_modules/zod/lib/src/types/undefined.d.ts",
         "./node_modules/zod/lib/src/types/union.d.ts",
         "./node_modules/zod/lib/src/types/unknown.d.ts",
-        "./node_modules/zod/lib/src/types/void.d.ts",
-        "./node_modules/zod/lib/src/zoderror.d.ts"
+        "./node_modules/zod/lib/src/types/void.d.ts"
       ],
       "./node_modules/zod/lib/src/parser.d.ts": [
-        "./node_modules/zod/lib/src/defaulterrormap.d.ts",
+        "./node_modules/zod/lib/src/ZodError.d.ts",
+        "./node_modules/zod/lib/src/defaultErrorMap.d.ts",
         "./node_modules/zod/lib/src/helpers/util.d.ts",
-        "./node_modules/zod/lib/src/types/base.d.ts",
-        "./node_modules/zod/lib/src/zoderror.d.ts"
+        "./node_modules/zod/lib/src/types/base.d.ts"
       ],
       "./node_modules/zod/lib/src/types/any.d.ts": [
         "./node_modules/zod/lib/src/types/base.d.ts"
@@ -1059,7 +1062,7 @@
       ],
       "./node_modules/zod/lib/src/types/keyof.d.ts": [
         "./node_modules/zod/lib/src/types/base.d.ts",
-        "./node_modules/zod/lib/src/types/nativeenum.d.ts"
+        "./node_modules/zod/lib/src/types/nativeEnum.d.ts"
       ],
       "./node_modules/zod/lib/src/types/lazy.d.ts": [
         "./node_modules/zod/lib/src/types/base.d.ts"
@@ -1067,7 +1070,7 @@
       "./node_modules/zod/lib/src/types/literal.d.ts": [
         "./node_modules/zod/lib/src/types/base.d.ts"
       ],
-      "./node_modules/zod/lib/src/types/nativeenum.d.ts": [
+      "./node_modules/zod/lib/src/types/nativeEnum.d.ts": [
         "./node_modules/zod/lib/src/types/base.d.ts"
       ],
       "./node_modules/zod/lib/src/types/null.d.ts": [
@@ -1077,8 +1080,8 @@
         "./node_modules/zod/lib/src/types/base.d.ts"
       ],
       "./node_modules/zod/lib/src/types/object.d.ts": [
-        "./node_modules/zod/lib/src/helpers/objectutil.d.ts",
-        "./node_modules/zod/lib/src/helpers/partialutil.d.ts",
+        "./node_modules/zod/lib/src/helpers/objectUtil.d.ts",
+        "./node_modules/zod/lib/src/helpers/partialUtil.d.ts",
         "./node_modules/zod/lib/src/types/base.d.ts",
         "./node_modules/zod/lib/src/types/undefined.d.ts",
         "./node_modules/zod/lib/src/types/union.d.ts"
@@ -1090,9 +1093,9 @@
         "./node_modules/zod/lib/src/types/base.d.ts"
       ],
       "./node_modules/zod/lib/src/types/string.d.ts": [
-        "./node_modules/zod/lib/src/helpers/errorutil.d.ts",
-        "./node_modules/zod/lib/src/types/base.d.ts",
-        "./node_modules/zod/lib/src/zoderror.d.ts"
+        "./node_modules/zod/lib/src/ZodError.d.ts",
+        "./node_modules/zod/lib/src/helpers/errorUtil.d.ts",
+        "./node_modules/zod/lib/src/types/base.d.ts"
       ],
       "./node_modules/zod/lib/src/types/tuple.d.ts": [
         "./node_modules/zod/lib/src/types/base.d.ts"
@@ -1108,9 +1111,6 @@
       ],
       "./node_modules/zod/lib/src/types/void.d.ts": [
         "./node_modules/zod/lib/src/types/base.d.ts"
-      ],
-      "./node_modules/zod/lib/src/zoderror.d.ts": [
-        "./node_modules/zod/lib/src/parser.d.ts"
       ],
       "./src/bin.ts": [
         "./node_modules/arg/index.d.ts",
@@ -1368,39 +1368,43 @@
         "./node_modules/@types/node/stream.d.ts",
         "./node_modules/@types/node/zlib.d.ts"
       ],
-      "./node_modules/jest-diff/build/difflines.d.ts": [
-        "./node_modules/jest-diff/build/cleanupsemantic.d.ts",
+      "./node_modules/jest-diff/build/diffLines.d.ts": [
+        "./node_modules/jest-diff/build/cleanupSemantic.d.ts",
         "./node_modules/jest-diff/build/types.d.ts"
       ],
       "./node_modules/jest-diff/build/index.d.ts": [
-        "./node_modules/jest-diff/build/cleanupsemantic.d.ts",
-        "./node_modules/jest-diff/build/difflines.d.ts",
-        "./node_modules/jest-diff/build/printdiffs.d.ts",
+        "./node_modules/jest-diff/build/cleanupSemantic.d.ts",
+        "./node_modules/jest-diff/build/diffLines.d.ts",
+        "./node_modules/jest-diff/build/printDiffs.d.ts",
         "./node_modules/jest-diff/build/types.d.ts"
       ],
-      "./node_modules/jest-diff/build/printdiffs.d.ts": [
-        "./node_modules/jest-diff/build/cleanupsemantic.d.ts",
+      "./node_modules/jest-diff/build/printDiffs.d.ts": [
+        "./node_modules/jest-diff/build/cleanupSemantic.d.ts",
         "./node_modules/jest-diff/build/types.d.ts"
       ],
       "./node_modules/pretty-format/build/index.d.ts": [
         "./node_modules/pretty-format/build/types.d.ts"
       ],
+      "./node_modules/zod/lib/src/ZodError.d.ts": [
+        "./node_modules/zod/lib/src/parser.d.ts"
+      ],
       "./node_modules/zod/lib/src/codegen.d.ts": [
         "./node_modules/zod/lib/src/index.d.ts"
       ],
-      "./node_modules/zod/lib/src/defaulterrormap.d.ts": [
-        "./node_modules/zod/lib/src/zoderror.d.ts"
+      "./node_modules/zod/lib/src/defaultErrorMap.d.ts": [
+        "./node_modules/zod/lib/src/ZodError.d.ts"
       ],
-      "./node_modules/zod/lib/src/helpers/objectutil.d.ts": [
+      "./node_modules/zod/lib/src/helpers/objectUtil.d.ts": [
         "./node_modules/zod/lib/src/types/base.d.ts",
         "./node_modules/zod/lib/src/types/object.d.ts"
       ],
-      "./node_modules/zod/lib/src/helpers/partialutil.d.ts": [
+      "./node_modules/zod/lib/src/helpers/partialUtil.d.ts": [
         "./node_modules/zod/lib/src/index.d.ts"
       ],
       "./node_modules/zod/lib/src/index.d.ts": [
+        "./node_modules/zod/lib/src/ZodError.d.ts",
         "./node_modules/zod/lib/src/codegen.d.ts",
-        "./node_modules/zod/lib/src/defaulterrormap.d.ts",
+        "./node_modules/zod/lib/src/defaultErrorMap.d.ts",
         "./node_modules/zod/lib/src/parser.d.ts",
         "./node_modules/zod/lib/src/types/any.d.ts",
         "./node_modules/zod/lib/src/types/array.d.ts",
@@ -1414,7 +1418,7 @@
         "./node_modules/zod/lib/src/types/keyof.d.ts",
         "./node_modules/zod/lib/src/types/lazy.d.ts",
         "./node_modules/zod/lib/src/types/literal.d.ts",
-        "./node_modules/zod/lib/src/types/nativeenum.d.ts",
+        "./node_modules/zod/lib/src/types/nativeEnum.d.ts",
         "./node_modules/zod/lib/src/types/null.d.ts",
         "./node_modules/zod/lib/src/types/number.d.ts",
         "./node_modules/zod/lib/src/types/object.d.ts",
@@ -1425,14 +1429,13 @@
         "./node_modules/zod/lib/src/types/undefined.d.ts",
         "./node_modules/zod/lib/src/types/union.d.ts",
         "./node_modules/zod/lib/src/types/unknown.d.ts",
-        "./node_modules/zod/lib/src/types/void.d.ts",
-        "./node_modules/zod/lib/src/zoderror.d.ts"
+        "./node_modules/zod/lib/src/types/void.d.ts"
       ],
       "./node_modules/zod/lib/src/parser.d.ts": [
-        "./node_modules/zod/lib/src/defaulterrormap.d.ts",
+        "./node_modules/zod/lib/src/ZodError.d.ts",
+        "./node_modules/zod/lib/src/defaultErrorMap.d.ts",
         "./node_modules/zod/lib/src/helpers/util.d.ts",
-        "./node_modules/zod/lib/src/types/base.d.ts",
-        "./node_modules/zod/lib/src/zoderror.d.ts"
+        "./node_modules/zod/lib/src/types/base.d.ts"
       ],
       "./node_modules/zod/lib/src/types/any.d.ts": [
         "./node_modules/zod/lib/src/types/base.d.ts"
@@ -1467,7 +1470,7 @@
       ],
       "./node_modules/zod/lib/src/types/keyof.d.ts": [
         "./node_modules/zod/lib/src/types/base.d.ts",
-        "./node_modules/zod/lib/src/types/nativeenum.d.ts"
+        "./node_modules/zod/lib/src/types/nativeEnum.d.ts"
       ],
       "./node_modules/zod/lib/src/types/lazy.d.ts": [
         "./node_modules/zod/lib/src/types/base.d.ts"
@@ -1475,7 +1478,7 @@
       "./node_modules/zod/lib/src/types/literal.d.ts": [
         "./node_modules/zod/lib/src/types/base.d.ts"
       ],
-      "./node_modules/zod/lib/src/types/nativeenum.d.ts": [
+      "./node_modules/zod/lib/src/types/nativeEnum.d.ts": [
         "./node_modules/zod/lib/src/types/base.d.ts"
       ],
       "./node_modules/zod/lib/src/types/null.d.ts": [
@@ -1485,8 +1488,8 @@
         "./node_modules/zod/lib/src/types/base.d.ts"
       ],
       "./node_modules/zod/lib/src/types/object.d.ts": [
-        "./node_modules/zod/lib/src/helpers/objectutil.d.ts",
-        "./node_modules/zod/lib/src/helpers/partialutil.d.ts",
+        "./node_modules/zod/lib/src/helpers/objectUtil.d.ts",
+        "./node_modules/zod/lib/src/helpers/partialUtil.d.ts",
         "./node_modules/zod/lib/src/types/base.d.ts",
         "./node_modules/zod/lib/src/types/undefined.d.ts",
         "./node_modules/zod/lib/src/types/union.d.ts"
@@ -1498,9 +1501,9 @@
         "./node_modules/zod/lib/src/types/base.d.ts"
       ],
       "./node_modules/zod/lib/src/types/string.d.ts": [
-        "./node_modules/zod/lib/src/helpers/errorutil.d.ts",
-        "./node_modules/zod/lib/src/types/base.d.ts",
-        "./node_modules/zod/lib/src/zoderror.d.ts"
+        "./node_modules/zod/lib/src/ZodError.d.ts",
+        "./node_modules/zod/lib/src/helpers/errorUtil.d.ts",
+        "./node_modules/zod/lib/src/types/base.d.ts"
       ],
       "./node_modules/zod/lib/src/types/tuple.d.ts": [
         "./node_modules/zod/lib/src/types/base.d.ts"
@@ -1516,9 +1519,6 @@
       ],
       "./node_modules/zod/lib/src/types/void.d.ts": [
         "./node_modules/zod/lib/src/types/base.d.ts"
-      ],
-      "./node_modules/zod/lib/src/zoderror.d.ts": [
-        "./node_modules/zod/lib/src/parser.d.ts"
       ],
       "./src/constants.ts": [
         "./node_modules/zod/lib/src/index.d.ts"
@@ -1578,10 +1578,10 @@
       "./node_modules/arg/index.d.ts",
       "./node_modules/ci-info/index.d.ts",
       "./node_modules/dot-prop/index.d.ts",
-      "./node_modules/jest-diff/build/cleanupsemantic.d.ts",
-      "./node_modules/jest-diff/build/difflines.d.ts",
+      "./node_modules/jest-diff/build/cleanupSemantic.d.ts",
+      "./node_modules/jest-diff/build/diffLines.d.ts",
       "./node_modules/jest-diff/build/index.d.ts",
-      "./node_modules/jest-diff/build/printdiffs.d.ts",
+      "./node_modules/jest-diff/build/printDiffs.d.ts",
       "./node_modules/jest-diff/build/types.d.ts",
       "./node_modules/pkg-conf/index.d.ts",
       "./node_modules/pretty-format/build/index.d.ts",
@@ -1625,11 +1625,12 @@
       "./node_modules/typescript/lib/lib.es2020.symbol.wellknown.d.ts",
       "./node_modules/typescript/lib/lib.es5.d.ts",
       "./node_modules/typescript/lib/lib.esnext.intl.d.ts",
+      "./node_modules/zod/lib/src/ZodError.d.ts",
       "./node_modules/zod/lib/src/codegen.d.ts",
-      "./node_modules/zod/lib/src/defaulterrormap.d.ts",
-      "./node_modules/zod/lib/src/helpers/errorutil.d.ts",
-      "./node_modules/zod/lib/src/helpers/objectutil.d.ts",
-      "./node_modules/zod/lib/src/helpers/partialutil.d.ts",
+      "./node_modules/zod/lib/src/defaultErrorMap.d.ts",
+      "./node_modules/zod/lib/src/helpers/errorUtil.d.ts",
+      "./node_modules/zod/lib/src/helpers/objectUtil.d.ts",
+      "./node_modules/zod/lib/src/helpers/partialUtil.d.ts",
       "./node_modules/zod/lib/src/helpers/util.d.ts",
       "./node_modules/zod/lib/src/index.d.ts",
       "./node_modules/zod/lib/src/parser.d.ts",
@@ -1645,7 +1646,7 @@
       "./node_modules/zod/lib/src/types/keyof.d.ts",
       "./node_modules/zod/lib/src/types/lazy.d.ts",
       "./node_modules/zod/lib/src/types/literal.d.ts",
-      "./node_modules/zod/lib/src/types/nativeenum.d.ts",
+      "./node_modules/zod/lib/src/types/nativeEnum.d.ts",
       "./node_modules/zod/lib/src/types/null.d.ts",
       "./node_modules/zod/lib/src/types/number.d.ts",
       "./node_modules/zod/lib/src/types/object.d.ts",
@@ -1657,7 +1658,6 @@
       "./node_modules/zod/lib/src/types/union.d.ts",
       "./node_modules/zod/lib/src/types/unknown.d.ts",
       "./node_modules/zod/lib/src/types/void.d.ts",
-      "./node_modules/zod/lib/src/zoderror.d.ts",
       "./src/bin.ts",
       "./src/common.ts",
       "./src/constants.ts",
