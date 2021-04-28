@@ -657,8 +657,8 @@
         "affectsGlobalScope": false
       },
       "./node_modules/@types/node/index.d.ts": {
-        "version": "d29759262ccfcd93fc78be0d67a5420d3db85b890a1054cc3747b5605763e4c5",
-        "signature": "d29759262ccfcd93fc78be0d67a5420d3db85b890a1054cc3747b5605763e4c5",
+        "version": "6c9c7e459e013ddf52c70b90f88bbdd925e483ef984d80f9bffb501029974e82",
+        "signature": "6c9c7e459e013ddf52c70b90f88bbdd925e483ef984d80f9bffb501029974e82",
         "affectsGlobalScope": false
       },
       "./node_modules/jest-diff/build/cleanupSemantic.d.ts": {
