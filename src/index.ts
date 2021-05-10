@@ -107,7 +107,11 @@ function getEslintPaths(
  * Lint the project using `eslint`.
  */
 export async function lint(argv: string[], config: Config) {
-	const { _, "--check": check, "--filter-paths": filterPaths = false } = arg(
+	const {
+		_,
+		"--check": check,
+		"--filter-paths": filterPaths = false,
+	} = arg(
 		{
 			"--filter-paths": Boolean,
 			"--check": Boolean,
@@ -138,17 +142,15 @@ export async function check(_argv: string[], config: Config) {
  * Run full test suite without automatic fixes.
  */
 export async function test(argv: string[], config: Config) {
-	const {
-		"--force-exit": forceExit,
-		"--pass-with-no-tests": passWithNoTests,
-	} = arg(
-		{
-			"--force-exit": Boolean,
-			"--pass-with-no-tests": Boolean,
-			"-f": "--force-exit",
-		},
-		{ argv }
-	);
+	const { "--force-exit": forceExit, "--pass-with-no-tests": passWithNoTests } =
+		arg(
+			{
+				"--force-exit": Boolean,
+				"--pass-with-no-tests": Boolean,
+				"-f": "--force-exit",
+			},
+			{ argv }
+		);
 
 	await check([], config);
 	await specs(
