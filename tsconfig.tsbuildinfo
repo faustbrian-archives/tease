@@ -427,8 +427,8 @@
         "affectsGlobalScope": true
       },
       "./node_modules/@types/node/async_hooks.d.ts": {
-        "version": "c9e8a340da877b05a52525554aa255b3f44958c7f6748ebf5cbe0bfbe6766878",
-        "signature": "c9e8a340da877b05a52525554aa255b3f44958c7f6748ebf5cbe0bfbe6766878",
+        "version": "e23424b97418eca3226fd24de079f1203eb70360622e4e093af2aff14d4be6ec",
+        "signature": "e23424b97418eca3226fd24de079f1203eb70360622e4e093af2aff14d4be6ec",
         "affectsGlobalScope": false
       },
       "./node_modules/@types/node/buffer.d.ts": {
@@ -522,8 +522,8 @@
         "affectsGlobalScope": false
       },
       "./node_modules/@types/node/net.d.ts": {
-        "version": "1eaf8fecdae37cc4c85f496d2bdb9e8d46c21b3643b7e27d3646a330585515a5",
-        "signature": "1eaf8fecdae37cc4c85f496d2bdb9e8d46c21b3643b7e27d3646a330585515a5",
+        "version": "be280fd659df06a3fb6307de60f0e6bcfa69b09711d1ab0769389a995d24db96",
+        "signature": "be280fd659df06a3fb6307de60f0e6bcfa69b09711d1ab0769389a995d24db96",
         "affectsGlobalScope": false
       },
       "./node_modules/@types/node/os.d.ts": {
@@ -562,8 +562,8 @@
         "affectsGlobalScope": false
       },
       "./node_modules/@types/node/repl.d.ts": {
-        "version": "64535caf208a02420d2d04eb2029269efedd11eb8597ada0d5e6f3d54ec663ae",
-        "signature": "64535caf208a02420d2d04eb2029269efedd11eb8597ada0d5e6f3d54ec663ae",
+        "version": "a6b0abdb67d63ebe964ba5fee31bc3daf10c12eecd46b24d778426010c04c67e",
+        "signature": "a6b0abdb67d63ebe964ba5fee31bc3daf10c12eecd46b24d778426010c04c67e",
         "affectsGlobalScope": false
       },
       "./node_modules/@types/node/stream.d.ts": {
@@ -622,8 +622,8 @@
         "affectsGlobalScope": false
       },
       "./node_modules/@types/node/vm.d.ts": {
-        "version": "1aa7dbace2b7b2ef60897dcd4f66252ee6ba85e594ded8918c9acdcecda1896c",
-        "signature": "1aa7dbace2b7b2ef60897dcd4f66252ee6ba85e594ded8918c9acdcecda1896c",
+        "version": "60c9e27816ec8ac8df7240598bb086e95b47edfb454c5cbf4003c812e0ed6e39",
+        "signature": "60c9e27816ec8ac8df7240598bb086e95b47edfb454c5cbf4003c812e0ed6e39",
         "affectsGlobalScope": false
       },
       "./node_modules/@types/node/worker_threads.d.ts": {
