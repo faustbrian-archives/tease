@@ -512,8 +512,8 @@
         "affectsGlobalScope": false
       },
       "./node_modules/@types/node/worker_threads.d.ts": {
-        "version": "5abb4b08d993bc4e27a40be18b7362e72b1c3d3a0e9820e7ce7fa464c45cd802",
-        "signature": "5abb4b08d993bc4e27a40be18b7362e72b1c3d3a0e9820e7ce7fa464c45cd802",
+        "version": "f5fada4feb9ebb2d4fb1656bdd131d72e0e837ca795767d0323abc1a8888483a",
+        "signature": "f5fada4feb9ebb2d4fb1656bdd131d72e0e837ca795767d0323abc1a8888483a",
         "affectsGlobalScope": false
       },
       "./node_modules/@types/node/zlib.d.ts": {
