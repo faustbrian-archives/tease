@@ -377,8 +377,8 @@
         "affectsGlobalScope": false
       },
       "./node_modules/@types/node/http.d.ts": {
-        "version": "b32b3b64fa275e5a014aff4fa77f8fa8bb3d357b87f86f9327d55b1880b137c3",
-        "signature": "b32b3b64fa275e5a014aff4fa77f8fa8bb3d357b87f86f9327d55b1880b137c3",
+        "version": "d28c8598067b15c7643558b936e68caefe5d171d0e629e19e2aa6ca870bb4b00",
+        "signature": "d28c8598067b15c7643558b936e68caefe5d171d0e629e19e2aa6ca870bb4b00",
         "affectsGlobalScope": false
       },
       "./node_modules/@types/node/http2.d.ts": {
