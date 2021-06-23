@@ -39,7 +39,7 @@
 		"eslint-plugin-unused-imports": "^1.1.1",
 		"husky": "^6.0.0",
 		"is-ci": "^3.0.0",
-		"jest": "^27.0.4",
+		"jest": "^27.0.5",
 		"jest-extended": "^0.11.5",
 		"pinst": "^2.1.6",
 		"pkg-conf": "^3.1.0",
