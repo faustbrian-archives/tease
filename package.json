@@ -23,7 +23,7 @@
 	"dependencies": {
 		"@sindresorhus/tsconfig": "^2.0.0",
 		"@types/jest": "^27.0.1",
-		"@types/node": "^16.7.13",
+		"@types/node": "^16.9.0",
 		"@types/prettier": "^2.3.2",
 		"@types/rimraf": "^3.0.2",
 		"@typescript-eslint/eslint-plugin": "^4.31.0",
@@ -39,7 +39,7 @@
 		"eslint-plugin-unused-imports": "^1.1.4",
 		"husky": "^7.0.2",
 		"is-ci": "^3.0.0",
-		"jest": "^27.1.0",
+		"jest": "^27.1.1",
 		"jest-extended": "^0.11.5",
 		"pinst": "^2.1.6",
 		"pkg-conf": "^4.0.0",
