@@ -33,7 +33,7 @@
 		"dot-prop": "^6.0.1",
 		"eslint": "^7.32.0",
 		"eslint-config-prettier": "^8.3.0",
-		"eslint-plugin-jest": "^24.4.0",
+		"eslint-plugin-jest": "^24.4.2",
 		"eslint-plugin-prettier": "^4.0.0",
 		"eslint-plugin-simple-import-sort": "^7.0.0",
 		"eslint-plugin-unused-imports": "^1.1.4",
@@ -48,7 +48,7 @@
 		"rimraf": "^3.0.2",
 		"ts-jest": "^27.0.5",
 		"ts-node": "^10.2.1",
-		"type-fest": "^2.3.2",
+		"type-fest": "^2.3.3",
 		"typescript": "^4.4.3",
 		"typescript-language-server": "^0.6.2",
 		"zod": "^3.8.2"
